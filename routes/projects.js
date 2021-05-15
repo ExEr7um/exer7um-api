@@ -25,7 +25,6 @@ router.get("/:projectId", async (req, res) => {
 // Создать проект
 router.post("/", async (req, res) => {
   const project = new Project(req.body);
-
   try {
     const response = await project.save();
     res.json(response);
@@ -37,11 +36,11 @@ router.post("/", async (req, res) => {
 // Обновить проект
 router.patch("/:projectId", async (req, res) => {
   try {
-    const project = await Project.updateOne(
+    const response = await Project.updateOne(
       { _id: req.params.projectId },
       { $set: req.body }
     );
-    res.json(project);
+    res.json(response);
   } catch (err) {
     res.json({ message: err });
   }
@@ -50,8 +49,8 @@ router.patch("/:projectId", async (req, res) => {
 // Удалить проект
 router.delete("/:projectId", async (req, res) => {
   try {
-    const project = await Project.remove({ _id: req.params.projectId });
-    res.json(project);
+    const response = await Project.deleteOne({ _id: req.params.projectId });
+    res.json(response);
   } catch (err) {
     res.json({ message: err });
   }

@@ -7,9 +7,11 @@ app.use(express.json());
 
 // Импрортирование Routes
 const projectsRoute = require("./routes/projects");
+const messagesRoute = require("./routes/messages");
 
 // Использование Routes
 app.use("/projects", projectsRoute);
+app.use("/messages", messagesRoute);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -19,7 +21,7 @@ app.get("/", (req, res) => {
 mongoose.connect(
   process.env.MONGODB_CONNECTION,
   { useNewUrlParser: true, useUnifiedTopology: true },
-  () => console.log("База данных подключена!")
+  () => console.log("Соединение с базой данных установлено!")
 );
 
 // Запуск сервера
