@@ -24,13 +24,11 @@ router.get("/:projectId", async (req, res) => {
 
 // Создать проект
 router.post("/", async (req, res) => {
-  const project = new Project({
-    title: req.body.title,
-  });
+  const project = new Project(req.body);
 
   try {
     const response = await project.save();
-    res.json(response.status);
+    res.json(response);
   } catch (err) {
     res.json({ message: err });
   }
@@ -41,7 +39,7 @@ router.patch("/:projectId", async (req, res) => {
   try {
     const project = await Project.updateOne(
       { _id: req.params.projectId },
-      { $set: { title: req.body.title } }
+      { $set: req.body }
     );
     res.json(project);
   } catch (err) {
