@@ -23,6 +23,19 @@ router.post("/", async (req, res) => {
   }
 });
 
+// Обновить сообщение
+router.patch("/:messageId", async (req, res) => {
+  try {
+    const response = await Message.updateOne(
+      { _id: req.params.messageId },
+      { $set: req.body }
+    );
+    res.json(response);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
+
 // Удалить сообщение
 router.delete("/:messageId", async (req, res) => {
   try {

@@ -15,7 +15,7 @@ const MessageSchema = mongoose.Schema({
   },
   status: {
     type: String,
-    default: "unread",
+    default: "Не просмотрено",
   },
   createdAt: {
     type: Date,
