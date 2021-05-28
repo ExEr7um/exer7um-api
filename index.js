@@ -29,4 +29,4 @@ mongoose.connect(
 );
 
 // Запуск сервера
-app.listen(5000, () => console.log("Сервер запущен"));
+app.listen(process.env.PORT, () => console.log("Сервер запущен"));
