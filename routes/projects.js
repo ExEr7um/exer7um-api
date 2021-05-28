@@ -1,11 +1,11 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 const Project = require("../models/Project");
+const verify = require("./verifyToken");
 
 // Получить проекты
 router.get("/", async (req, res) => {
   try {
-    const projects = await Project.find();
+    const projects = await Project.find().sort({ createdAt: -1 });
     res.json(projects);
   } catch (err) {
     res.json({ message: err });
@@ -23,7 +23,7 @@ router.get("/:projectId", async (req, res) => {
 });
 
 // Создать проект
-router.post("/", async (req, res) => {
+router.post("/", verify, async (req, res) => {
   const project = new Project(req.body);
   try {
     const response = await project.save();
@@ -34,7 +34,7 @@ router.post("/", async (req, res) => {
 });
 
 // Обновить проект
-router.patch("/:projectId", async (req, res) => {
+router.patch("/:projectId", verify, async (req, res) => {
   try {
     const response = await Project.updateOne(
       { _id: req.params.projectId },
@@ -47,7 +47,7 @@ router.patch("/:projectId", async (req, res) => {
 });
 
 // Удалить проект
-router.delete("/:projectId", async (req, res) => {
+router.delete("/:projectId", verify, async (req, res) => {
   try {
     const response = await Project.deleteOne({ _id: req.params.projectId });
     res.json(response);
