@@ -5,7 +5,7 @@ const Project = require("../models/Project");
 // Получить проекты
 router.get("/", async (req, res) => {
   try {
-    const projects = await Project.find();
+    const projects = await Project.find().sort({ createdAt: -1 });
     res.json(projects);
   } catch (err) {
     res.json({ message: err });
