@@ -1,9 +1,9 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 const Message = require("../models/Message");
+const verify = require("./verifyToken");
 
 // Получить сообщения
-router.get("/", async (req, res) => {
+router.get("/", verify, async (req, res) => {
   try {
     const messages = await Message.find().sort({ createdAt: -1 });
     res.json(messages);
@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
 });
 
 // Обновить сообщение
-router.patch("/:messageId", async (req, res) => {
+router.patch("/:messageId", verify, async (req, res) => {
   try {
     const response = await Message.updateOne(
       { _id: req.params.messageId },
@@ -37,7 +37,7 @@ router.patch("/:messageId", async (req, res) => {
 });
 
 // Удалить сообщение
-router.delete("/:messageId", async (req, res) => {
+router.delete("/:messageId", verify, async (req, res) => {
   try {
     const response = await Message.deleteOne({ _id: req.params.messageId });
     res.json(response);
