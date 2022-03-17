@@ -4,7 +4,8 @@
   "info": {
     "singularName": "message",
     "pluralName": "messages",
-    "displayName": "Message"
+    "displayName": "Message",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -23,9 +24,10 @@
       "type": "text",
       "required": true
     },
-    "status": {
-      "type": "string",
-      "default": "Не просмотрено"
+    "read": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
