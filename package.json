@@ -1,8 +1,7 @@
 {
   "name": "exer7um-api",
   "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
+  "version": "2.0.0",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -16,15 +15,11 @@
     "@strapi/strapi": "4.1.5",
     "pg": "8.7.3"
   },
-  "author": {
-    "name": "A Strapi developer"
-  },
   "strapi": {
     "uuid": "1ef483c6-4332-42a5-bf4a-1bdf8a0dea8f"
   },
   "engines": {
     "node": ">=12.x.x <=16.x.x",
     "npm": ">=6.0.0"
-  },
-  "license": "MIT"
+  }
 }
