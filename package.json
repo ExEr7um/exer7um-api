@@ -1,25 +1,25 @@
 {
   "name": "exer7um-api",
-  "version": "1.1.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "version": "2.0.0",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
   },
-  "keywords": [],
-  "author": "exer7um",
-  "license": "ISC",
   "dependencies": {
-    "@sendgrid/mail": "^7.6.1",
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.4"
+    "@strapi/plugin-i18n": "4.1.5",
+    "@strapi/plugin-users-permissions": "4.1.5",
+    "@strapi/provider-email-sendgrid": "^4.1.5",
+    "@strapi/strapi": "4.1.5",
+    "pg": "8.7.3"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
+  "strapi": {
+    "uuid": "1ef483c6-4332-42a5-bf4a-1bdf8a0dea8f"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
   }
 }
