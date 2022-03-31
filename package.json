@@ -9,7 +9,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.1.5",
+    "@strapi/plugin-i18n": "4.1.6",
     "@strapi/plugin-users-permissions": "4.1.5",
     "@strapi/provider-email-sendgrid": "^4.1.5",
     "@strapi/provider-upload-cloudinary": "^4.1.5",
