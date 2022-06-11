@@ -1,7 +1,7 @@
 {
   "name": "exer7um-api",
   "private": true,
-  "version": "2.0.1",
+  "version": "2.0.2",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -9,11 +9,11 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.1.5",
-    "@strapi/plugin-users-permissions": "4.1.5",
-    "@strapi/provider-email-sendgrid": "^4.1.5",
-    "@strapi/provider-upload-cloudinary": "^4.1.5",
-    "@strapi/strapi": "4.1.5",
+    "@strapi/plugin-i18n": "4.1.12",
+    "@strapi/plugin-users-permissions": "4.1.12",
+    "@strapi/provider-email-sendgrid": "^4.1.12",
+    "@strapi/provider-upload-cloudinary": "^4.1.12",
+    "@strapi/strapi": "4.1.12",
     "pg": "8.7.3"
   },
   "strapi": {
