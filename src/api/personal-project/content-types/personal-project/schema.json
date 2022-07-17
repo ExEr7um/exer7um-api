@@ -1,0 +1,71 @@
+{
+  "attributes": {
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "type": "text"
+    },
+    "icon": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true,
+      "type": "string"
+    },
+    "link": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true,
+      "type": "string",
+      "unique": false
+    },
+    "tags": {
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "type": "relation"
+    },
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "type": "string"
+    },
+    "year": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true,
+      "type": "integer"
+    }
+  },
+  "collectionName": "personal_projects",
+  "info": {
+    "description": "Небольшой личный проект",
+    "displayName": "Личный проект",
+    "pluralName": "personal-projects",
+    "singularName": "personal-project"
+  },
+  "kind": "collectionType",
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  }
+}
