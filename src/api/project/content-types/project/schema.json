@@ -1,29 +1,13 @@
 {
-  "kind": "collectionType",
-  "collectionName": "projects",
-  "info": {
-    "singularName": "project",
-    "pluralName": "projects",
-    "displayName": "Project",
-    "description": ""
-  },
-  "options": {
-    "draftAndPublish": true
-  },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
   "attributes": {
-    "title": {
+    "color": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
-      "type": "string",
-      "required": true
+      "required": true,
+      "type": "string"
     },
     "description": {
       "pluginOptions": {
@@ -31,33 +15,8 @@
           "localized": true
         }
       },
-      "type": "text",
-      "required": true
-    },
-    "logo": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "required": true
-    },
-    "color": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "string",
-      "required": true
+      "required": true,
+      "type": "text"
     },
     "link": {
       "pluginOptions": {
@@ -65,8 +24,28 @@
           "localized": false
         }
       },
-      "type": "string",
-      "required": true
+      "required": true,
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": ["images", "files", "videos", "audios"],
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true,
+      "type": "media"
+    },
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "type": "string"
     },
     "year": {
       "pluginOptions": {
@@ -74,8 +53,24 @@
           "localized": false
         }
       },
-      "type": "integer",
-      "required": true
+      "required": true,
+      "type": "integer"
+    }
+  },
+  "collectionName": "projects",
+  "info": {
+    "description": "Коммерческие проекты",
+    "displayName": "Проект",
+    "pluralName": "projects",
+    "singularName": "project"
+  },
+  "kind": "collectionType",
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
     }
   }
 }

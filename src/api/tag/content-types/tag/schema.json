@@ -1,20 +1,20 @@
 {
-  "kind": "collectionType",
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string",
+      "unique": true
+    }
+  },
   "collectionName": "tags",
   "info": {
-    "singularName": "tag",
+    "displayName": "Тег",
     "pluralName": "tags",
-    "displayName": "Tag"
+    "singularName": "tag"
   },
+  "kind": "collectionType",
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
-  "attributes": {
-    "title": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    }
-  }
+  "pluginOptions": {}
 }
