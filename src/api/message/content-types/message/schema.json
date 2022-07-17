@@ -1,33 +1,33 @@
 {
-  "kind": "collectionType",
+  "attributes": {
+    "email": {
+      "required": true,
+      "type": "email"
+    },
+    "message": {
+      "required": true,
+      "type": "text"
+    },
+    "name": {
+      "required": true,
+      "type": "string"
+    },
+    "read": {
+      "default": false,
+      "required": true,
+      "type": "boolean"
+    }
+  },
   "collectionName": "messages",
   "info": {
-    "singularName": "message",
+    "description": "Сообщения от пользователей",
+    "displayName": "Сообщение",
     "pluralName": "messages",
-    "displayName": "Message",
-    "description": ""
+    "singularName": "message"
   },
+  "kind": "collectionType",
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
-  "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "email": {
-      "type": "email",
-      "required": true
-    },
-    "message": {
-      "type": "text",
-      "required": true
-    },
-    "read": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    }
-  }
+  "pluginOptions": {}
 }
