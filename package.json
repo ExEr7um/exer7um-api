@@ -13,7 +13,7 @@
     "@strapi/plugin-users-permissions": "4.1.12",
     "@strapi/provider-email-sendgrid": "^4.1.12",
     "@strapi/provider-upload-cloudinary": "^4.1.12",
-    "@strapi/strapi": "4.1.12",
+    "@strapi/strapi": "4.3.6",
     "pg": "8.7.3"
   },
   "strapi": {
